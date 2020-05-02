@@ -10,4 +10,4 @@ RUN apt-get update \
  && apt-get install -y \
 	git \
 	openssl \
- && git config credential.helper '!f() { sleep 1; echo "username=${GIT_USER}"; echo "password=${GIT_PASSWORD}"; }; f'
+ && git config --global credential.helper '!f() { sleep 1; echo "username=${GIT_USER}"; echo "password=${GIT_PASSWORD}"; }; f'

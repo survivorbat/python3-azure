@@ -10,5 +10,3 @@ RUN apt-get update \
  && apt-get install -y \
 	git \
 	openssl
-
-CMD ["/bin/sh", "-c", "git config --global credential.helper '!f() { sleep 1; echo \"username=${GIT_USER}\"; echo \"password=${GIT_PASSWORD}\"; }; f' && /azure-functions-host/Microsoft.Azure.WebJobs.Script.WebHost"]
